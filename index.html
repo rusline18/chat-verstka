@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat</title>
+
+    <!-- Icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css">
+    <!-- Fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <!-- Style-->
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+</head>
+<body>
+<div class="chat-index">
+    <div class="chat-column-left">
+        <div class="chat-profile">
+            <a href="#setting-modal" class="modal-trigger link-modal">
+                <i class="material-icons">dehaze</i>
+            </a>
+            <!--       <div class="chat-profile_content">
+                    <div class="avatar-user">
+                      <img src="https://i.kinja-img.com/gawker-media/image/upload/s--dMTJCIXu--/c_scale,f_auto,fl_progressive,q_80,w_800/myblkoukcgxb3dn1vyd7.jpg">
+                    </div>
+                    <div class="user-fullname">Петров Петр</div>
+                </div> -->
+        </div>
+        <div class="chat-list">
+            <div class="chat-list_search">
+                <i class="material-icons search-icon">search</i>
+                <input type="text" placeholder="Поиск" id="search">
+                <i class="material-icons close-icon">close</i>
+            </div>
+            <div class="chat-list_rooms">
+                <div class="chat-list_content">
+                    <div class="avatar">
+                        <img src="https://i.kinja-img.com/gawker-media/image/upload/s--dMTJCIXu--/c_scale,f_auto,fl_progressive,q_80,w_800/myblkoukcgxb3dn1vyd7.jpg" alt="Аватарка пользователя"">
+                    </div>
+                    <div class="chat-list_content_description">
+                        <div class="chat-list_content_description_header">
+                            <span>Иван Иванов</span>
+                            <div class="chat-list_content_description_header_time">
+                                <span>10.12.2019</span>
+                            </div>
+                            <div class="chat-list_content_description_body">
+                                <div class="chat-list_content_description_body_message">
+                                    <span>Lorem ipsum dolor sit amet.</span>
+                                </div>
+                                <div class="chat-list_content_description_body_badge">
+                                    <span>3</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-list_content">
+                    <div class="avatar">
+                        <img src="https://i.kinja-img.com/gawker-media/image/upload/s--dMTJCIXu--/c_scale,f_auto,fl_progressive,q_80,w_800/myblkoukcgxb3dn1vyd7.jpg" alt="Аватарка пользователя">
+                    </div>
+                    <div class="chat-list_content_description">
+                        <div class="chat-list_content_description_header">
+                            <span>Иван Иванов</span>
+                        </div>
+                        <div class="chat-list_content_description_body">
+                            <div class="chat-list_content_description_body_message">
+                                <span>Lorem ipsum dolor sit amet.</span>
+                            </div>
+                            <div class="chat-list_content_description_body_time">
+                                <span>10.12.2019</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-list_content">
+                    <div class="avatar">
+                        <img src="https://i.kinja-img.com/gawker-media/image/upload/s--dMTJCIXu--/c_scale,f_auto,fl_progressive,q_80,w_800/myblkoukcgxb3dn1vyd7.jpg" alt="Аватарка пользователя"">
+                    </div>
+                    <div class="chat-list_content_description">
+                        <div class="chat-list_content_description_header">
+                            <span>Иван Иванов</span>
+                        </div>
+                        <div class="chat-list_content_description_body">
+                            <div class="chat-list_content_description_body_message">
+                                <span>Lorem ipsum dolor sit amet.</span>
+                            </div>
+                            <div class="chat-list_content_description_body_time">
+                                <span>10.12.2019</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-list_content">
+                    <div class="avatar">
+                        <img src="https://i.kinja-img.com/gawker-media/image/upload/s--dMTJCIXu--/c_scale,f_auto,fl_progressive,q_80,w_800/myblkoukcgxb3dn1vyd7.jpg" alt="Аватарка пользователя"">
+                    </div>
+                    <div class="chat-list_content_description">
+                        <div class="chat-list_content_description_header">
+                            <span>Иван Иванов</span>
+                        </div>
+                        <div class="chat-list_content_description_body">
+                            <div class="chat-list_content_description_body_message">
+                                <span>Lorem ipsum dolor sit amet.</span>
+                            </div>
+                            <div class="chat-list_content_description_body_time">
+                                <span>10.12.2019</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-list_content">
+                    <div class="avatar">
+                        <img src="https://i.kinja-img.com/gawker-media/image/upload/s--dMTJCIXu--/c_scale,f_auto,fl_progressive,q_80,w_800/myblkoukcgxb3dn1vyd7.jpg" alt="Аватарка пользователя"">
+                    </div>
+                    <div class="chat-list_content_description">
+                        <div class="chat-list_content_description_header">
+                            <span>Иван Иванов</span>
+                        </div>
+                        <div class="chat-list_content_description_body">
+                            <div class="chat-list_content_description_body_message">
+                                <span>Lorem ipsum dolor sit amet.</span>
+                            </div>
+                            <div class="chat-list_content_description_body_time">
+                                <span>10.12.2019</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-list_content">
+                    <div class="avatar">
+                        <img src="https://i.kinja-img.com/gawker-media/image/upload/s--dMTJCIXu--/c_scale,f_auto,fl_progressive,q_80,w_800/myblkoukcgxb3dn1vyd7.jpg" alt="Аватарка пользователя"">
+                    </div>
+                    <div class="chat-list_content_description">
+                        <div class="chat-list_content_description_header">
+                            <span>Иван Иванов</span>
+                        </div>
+                        <div class="chat-list_content_description_body">
+                            <div class="chat-list_content_description_body_message">
+                                <span>Lorem ipsum dolor sit amet.</span>
+                            </div>
+                            <div class="chat-list_content_description_body_time">
+                                <span>10.12.2019</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-list_content">
+                    <div class="avatar">
+                        <img src="https://i.kinja-img.com/gawker-media/image/upload/s--dMTJCIXu--/c_scale,f_auto,fl_progressive,q_80,w_800/myblkoukcgxb3dn1vyd7.jpg" alt="Аватарка пользователя"">
+                    </div>
+                    <div class="chat-list_content_description">
+                        <div class="chat-list_content_description_header">
+                            <span>Иван Иванов</span>
+                        </div>
+                        <div class="chat-list_content_description_body">
+                            <div class="chat-list_content_description_body_message">
+                                <span>Lorem ipsum dolor sit amet.</span>
+                            </div>
+                            <div class="chat-list_content_description_body_time">
+                                <span>10.12.2019</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-list_content">
+                    <div class="avatar">
+                        <img src="https://i.kinja-img.com/gawker-media/image/upload/s--dMTJCIXu--/c_scale,f_auto,fl_progressive,q_80,w_800/myblkoukcgxb3dn1vyd7.jpg" alt="Аватарка пользователя"">
+                    </div>
+                    <div class="chat-list_content_description">
+                        <div class="chat-list_content_description_header">
+                            <span>Иван Иванов</span>
+                        </div>
+                        <div class="chat-list_content_description_body">
+                            <div class="chat-list_content_description_body_message">
+                                <span>Lorem ipsum dolor sit amet.</span>
+                            </div>
+                            <div class="chat-list_content_description_body_time">
+                                <span>10.12.2019</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-list_content">
+                    <div class="avatar">
+                        <img src="https://i.kinja-img.com/gawker-media/image/upload/s--dMTJCIXu--/c_scale,f_auto,fl_progressive,q_80,w_800/myblkoukcgxb3dn1vyd7.jpg" alt="Аватарка пользователя"">
+                    </div>
+                    <div class="chat-list_content_description">
+                        <div class="chat-list_content_description_header">
+                            <span>Иван Иванов</span>
+                        </div>
+                        <div class="chat-list_content_description_body">
+                            <div class="chat-list_content_description_body_message">
+                                <span>Lorem ipsum dolor sit amet.</span>
+                            </div>
+                            <div class="chat-list_content_description_body_time">
+                                <span>10.12.2019</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="chat-column-right">
+        <div class="chat-info">
+            <div class="chat-info_user">
+                <div class="chat-info_user_fullname">Иван Иванов</div>
+                <div class="chat-info_user_last_visit">Был в сети 34 минут</div>
+            </div>
+            <div class="chat-info_search">
+                <div class="chat-info_search_icon">
+                    <label for="search">
+                        <i class="material-icons">search</i>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="chat-message">
+            <div class="chat-message_content interlocutor-message">
+                <div class="chat-message_content_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id unde laboriosam facilis esse a rem pariatur sequi doloribus corporis doloremque?</div>
+                <div class="chat-message_content_date">
+                    10.12.2019
+                </div>
+            </div>
+            <div class="chat-message_content interlocutor-message">
+                <div class="chat-message_content_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id unde laboriosam facilis esse a rem pariatur sequi doloribus corporis doloremque?</div>
+                <div class="chat-message_content_date">
+                    10.12.2019
+                </div>
+            </div>
+            <div class="chat-message_content interlocutor-message">
+                <div class="chat-message_content_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id unde laboriosam facilis esse a rem pariatur sequi doloribus corporis doloremque?</div>
+                <div class="chat-message_content_date">
+                    10.12.2019
+                </div>
+            </div>
+            <div class="chat-message_content own-message">
+                <div class="chat-message_content_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id unde laboriosam facilis esse a rem pariatur sequi doloribus corporis doloremque?</div>
+                <div class="chat-message_content_date">
+                    10.12.2019
+                </div>
+            </div>
+            <div class="chat-message_content own-message">
+                <div class="chat-message_content_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id unde laboriosam facilis esse a rem pariatur sequi doloribus corporis doloremque?</div>
+                <div class="chat-message_content_date">
+                    10.12.2019
+                </div>
+            </div>
+            <div class="chat-message_content interlocutor-message">
+                <div class="chat-message_content_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id unde laboriosam facilis esse a rem pariatur sequi doloribus corporis doloremque?</div>
+                <div class="chat-message_content_date">
+                    10.12.2019
+                </div>
+            </div>
+            <div class="chat-message_content interlocutor-message">
+                <div class="chat-message_content_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id unde laboriosam facilis esse a rem pariatur sequi doloribus corporis doloremque?</div>
+                <div class="chat-message_content_date">
+                    10.12.2019
+                </div>
+            </div>
+            <div class="chat-message_content own-message">
+                <div class="chat-message_content_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id unde laboriosam facilis esse a rem pariatur sequi doloribus corporis doloremque?</div>
+                <div class="chat-message_content_date">
+                    10.12.2019
+                </div>
+            </div>
+        </div>
+        <div class="chat-form">
+            <form action="#" class="chat-form_form">
+                <div class="chat-form_form_attach">
+                    <label>
+                        <i class="material-icons">attach_file</i>
+                        <input type="file" multiple="multiple" class="hide">
+                    </label>
+                </div>
+                <div class="chat-form_form_message">
+                    <textarea placeholder="Введите текст"></textarea>
+                </div>
+                <div class="chat-form_form_submit">
+                    <button>
+                        <i class="material-icons">send</i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- Modal Setting -->
+<div id="setting-modal" class="modal">
+    <div class="modal-content">
+        <div class="modal_header">
+            <div class="modal_avatar">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHhncpERo5iqGuBci4rnJ3-EGefCe11mgA0t_O8LWkH6F4NZoj" alt="avatar">
+            </div>
+            <span class="modal_fullName_user">Иван Иванов</span>
+            <div class="modal_action">
+                <span class="modal-close">
+                    <i class="material-icons close-modal">close</i>
+                </span>
+            </div>
+            <label class="upload-avatar">
+                <input type="file" accept="image/*">
+                <i class="material-icons">photo_camera</i>
+            </label>
+        </div>
+        <div class="modal-body">
+            <div class="tabs">
+                <div class="tab active" data-id="1">
+                    <div class="tab_icon">
+                        <i class="material-icons">account_circle</i>
+                    </div>
+                    <span>Аккаунт</span>
+                </div>
+                <div class="tab" data-id="2">
+                    <div class="tab_icon">
+                        <i class="material-icons">notifications</i>
+                    </div>
+                    <span>Уведомление</span>
+                </div>
+                <div class="tab" data-id="3">
+                    <div class="tab_icon">
+                        <i class="material-icons">security</i>
+                    </div>
+                    <span>Безопасность</span>
+                </div>
+            </div>
+            <div class="modal-body_items active" id="tab-1">
+                <div id="profile-action">
+                    <i class="material-icons" id="profile-edit">edit</i>
+                    <i class="material-icons hide" id="profile-save">save</i>
+                </div>
+                <div class="hide" id="profile-name">
+                    <div class="modal-item">
+                        <span class="modal-setting-label">Фамилия</span>
+                        <input type="text" id="last_name" value="Иванов" placeholder="Введите фамилию" class="modal-setting-input">
+                    </div>
+                    <div class="modal-item">
+                        <span class="modal-setting-label">Имя</span>
+                        <input type="text" id="first_name" value="Иван" placeholder="Введите имя" class="modal-setting-input">
+                    </div>
+                </div>
+                <div class="modal-items" id="profile-index">
+                    <div class="modal-item">
+                        <span class="modal-setting-label">Логин:</span>
+                        <span class="modal-setting-text" id="profile-username">@petrow</span>
+                        <div class="hide modal-setting_username">
+                            <input type="text" class="modal-setting-input" value="petrow" placeholder="Введите логин">
+                            <span>
+                                <i class="material-icons" id="profile-username-save">save</i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="modal-item">
+                        <span class="modal-setting-label">Email:</span>
+                        <span class="modal-setting-text">test@test.ru</span>
+                    </div>
+                    <div class="modal-item">
+                        <span class="modal-setting-label">Телефон:</span>
+                        <span class="modal-setting-text">+7 (111) 111 - 11 - 11</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body_items" id="tab-2">
+                <div class="modal-items">
+                    <div class="modal-item">
+                        <span class="modal-setting-label">Включить уведомление:</span>
+                        <div>
+                            <label>
+                                <input type="checkbox" class="filled-in" name="notification" checked id="enable-notification">
+                                <span></span>
+                            </label>
+                        </div>
+
+                    </div>
+                    <div class="modal-item">
+                        <span class="modal-setting-label">Звук:</span>
+                        <p class="range-field">
+                            <input type="range" id="sound-notification" min="0" max="100" />
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body_items" id="tab-3">
+                <div class="modal-items" id="security-modal">
+                    <div class="modal-item">
+                        <span class="modal-setting-label">Пароль:</span>
+                        <div>
+                            <span class="text-link" id="edit-password">Изменить пароль</span>
+                        </div>
+                        <div class="hide">
+                            <div class="password-field">
+                                <input type="password" class="modal-setting-input" placeholder="Пароль">
+                            </div>
+                            <div class="password-field">
+                                <input type="password" class="modal-item-input" placeholder="Подтверждение пароля">
+                            </div>
+                            <button id="password-button" class="waves-effect waves-light btn red lighten-1">Сохранить</button>
+                        </div>
+                    </div>
+                    <div class="modal-item">
+                        <span class="modal-setting-label">Сеансы:</span>
+                        <div>
+                            <span class="text-link" id="sessions">Посмотреть активные сеансы</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-items hide" id="history-sessions">
+                    <div class="sessions-items session-active">
+                        <div>Текущая сессия</div>
+                        <div class="session-active_row">
+                            <img src="icon/mobile.svg" alt="Мобильный телефон">
+                            <div>
+                                <div>Safary, Iphone 5S, IOS 12.0</div>
+                                <div>
+                                    176.59.110.192 - Германия, Russia
+                                </div>
+                            </div>
+                        </div>
+                        <a id="clear-all-session">Очистить все другие сеансы</a>
+                    </div>
+                    <div class="sessions-items" id="other-history-session">
+                        <div class="sessions-item">
+                            <img src="icon/computer.svg" alt="Компьютер">
+                            <div>
+                                <div>Chrome, Linux ubuntu</div>
+                                <div>188.234.48.45 - Москва, Russia</div>
+                            </div>
+                            <div>
+                                <div>Четверг</div>
+                                <a class="clear-session">Очистить</a>
+                            </div>
+                        </div>
+                        <div class="sessions-item">
+                            <img src="icon/mobile.svg" alt="Мобильный телефон">
+                            <div>
+                                <div>Safary, Iphone 5S, IOS 12.0</div>
+                                <div>188.234.48.45 - Татарстан, Russia</div>
+                            </div>
+                            <div>
+                                <div>20.05.2019</div>
+                                <a class="clear-session">Очистить</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <button class="waves-effect waves-light btn red lighten-1" id="sessions-button">Закрыть</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Compiled JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
